@@ -1,100 +1,31 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestra Voz es la Voz de la Historia</title>
-    <style>
-        /* Imagen de fondo ocupando toda la pantalla */
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: url('assets/images/continente-islas.webp') no-repeat center center/cover;
-            z-index: -1;
-        }
+<!-- Imagen de fondo -->
+<div class="background bg-inicio"></div>
 
-        /* Secciones */
-        main {
-            position: relative;
-            z-index: 1;
-        }
+<!-- Contenido principal -->
+<main>
+    <section id="Bienvenida">
+        <div class="overlay"></div>
+        <h2>Bienvenidos a «Nuestra voz es la voz de la historia»</h2>
+        <p>El lugar donde las voces de nuestros héroes resonarán por siempre.</p>
+    </section>
 
-        section {
-            position: relative;
-            text-align: center;
-            background-attachment: fixed;
-            padding: 5rem 2rem;
-        }
+    <section id="¿Que somos?">
+        <div class="overlay"></div>
+        <a href="#" class="btn btn-load" data-page="que-somos.html">¿Qué somos?</a>
+    </section>
 
-        /* Eliminamos la transparencia para que no haya efecto de difuminado */
-        .overlay {
-            background: rgba(255, 255, 255, 0); /* Ahora es totalmente transparente */
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
+    <section id="¿Donde encontrarnos?">
+        <div class="overlay"></div>
+        <a href="#" class="btn btn-load" data-page="donde-encontrarnos.html">¿Dónde encontrarnos?</a>
+    </section>
 
-        /* Estilos del texto en blanco */
-        h2 {
-            font-family: 'Inter', sans-serif;
-            font-weight: bold;
-            font-style: italic;
-            position: relative;
-            z-index: 1;
-            color: white; /* Texto en blanco */
-        }
+    <section id="¿Quienes somos?">
+        <div class="overlay"></div>
+        <a href="#" class="btn btn-load" data-page="quienes-somos.html">¿Quiénes Somos?</a>
+    </section>
 
-        p {
-            font-family: 'Georgia', serif;
-            font-style: italic;
-            position: relative;
-            z-index: 1;
-            color: white; /* Texto en blanco */
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Imagen de fondo -->
-    <div class="background"></div>
-
-    <!-- Contenido principal -->
-    <main>
-        <section id="Bienvenida">
-            <div class="overlay"></div>
-            <h2>Bienvenidos a "Nuestra voz es la voz de la historia"</h2>
-            <p>El lugar donde las voces de nuestros héroes resonarán por siempre.</p>
-        </section>
-
-        <section id="¿Que somos?">
-            <div class="overlay"></div>
-            <h2>¿Qué somos?</h2>
-            <p>"Nuestra voz es la voz de la historia" es un programa donde Felipe Ascencio y Sergio Ascencio (VGM) entrevistan a «Veteranos de guerra de Malvinas» con el fin de que sus historias y recuerdos nunca se pierdan. Esperemos que disfruten y aprendan mucho con las narrativas de nuestros queridos/as veteranos/as. ¡Viva la patria!</p>
-        </section>
-
-        <section id="¿Donde encontrarnos?">
-            <div class="overlay"></div>
-            <h2>¿Dónde encontrarnos?</h2>
-            <p>Encuentra las charlas completas en YouTube. O en formato podcast en Spotify.</p>
-        </section>
-
-        <section id="¿Quienes somos?">
-            <div class="overlay"></div>
-            <h2>¿Quiénes somos?</h2>
-            <p>X</p>
-        </section>
-
-        <section id="Contacto">
-            <div class="overlay"></div>
-            <h2>Contacto</h2>
-            <p>X</p>
-        </section>
-    </main>
-
-</body>
-</html>
+    <section id="Contacto">
+        <div class="overlay"></div>
+        <a href="#" class="btn btn-load" data-page="contacto.html">Contacto</a>
+    </section>
+</main>

@@ -23,7 +23,6 @@ body, html {
     border: none; /* Asegurar que no haya bordes */
 }
 
-/* Elimina líneas blancas entre secciones */
 .seccion:not(:last-child) {
     border-bottom: none;
 }
@@ -33,6 +32,92 @@ img {
     width: 100%;
     height: auto;
 }
+
+/* Fondos específicos para cada página */
+.bg-inicio {
+    background: url('assets/images/continente-islas.webp') no-repeat center center/cover;
+}
+
+.bg-que {
+    background: url('assets/images/foto-charla-victor.webp') no-repeat center center/cover;
+}
+
+.bg-donde {
+    background: url('assets/images/yt-spotify-bandera.webp') no-repeat center center/cover;
+}
+
+.bg-quienes {
+    background: url('assets/images/banner.webp') no-repeat center center/cover;
+}
+
+.bg-contacto {
+    background: url('assets/images/mate-ruta.webp') no-repeat center center/cover;
+}
+
+/* Configuración general para todos los fondos */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+
+section {
+    position: relative;
+    text-align: center;
+    background-attachment: fixed;
+    padding: 4rem 2rem;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 2.5rem;
+}
+
+p, .btn {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.overlay {
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+.btn {
+    display: inline-block;
+    color: white; /* Color del texto */
+    padding: 1.2rem 2rem; /* Aumenta el padding (tamaño del botón) */
+    border: 3px solid white; /* Borde blanco más grueso */
+    border-radius: 8px; /* Esquinas más redondeadas */
+    text-decoration: none;
+    font-size: 2rem; /* Aumenta el tamaño del texto */
+    background-color: transparent !important; /* Fondo transparente */
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: white; /* Fondo blanco al pasar el mouse */
+    color: black; /* Texto negro al pasar el mouse */
+}
+
   
 /* HEADER */
 header.main-header {

@@ -1,10 +1,39 @@
-/* FUENTES */
-body {
+/* FUENTES Y CONFIGURACIONES DE PADDING*/
+/* FUENTES Y CONFIGURACIONES DE PADDING */
+body, html {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Evita scroll horizontal */
+    min-height: 100vh;
 }
 
+.seccion {
+    background-size: cover;
+    background-position: center;
+    width: 100vw; /* Ocupar todo el ancho */
+    min-height: 100vh; /* Ocupar toda la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* Quitar márgenes */
+    padding: 0; /* Quitar padding */
+    border: none; /* Asegurar que no haya bordes */
+}
+
+/* Elimina líneas blancas entre secciones */
+.seccion:not(:last-child) {
+    border-bottom: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+  
 /* HEADER */
 header.main-header {
     background-color: #000; /* Fondo negro */
@@ -105,6 +134,7 @@ nav.main-nav ul li:hover .dropdown-content {
 main {
     margin-top: 5rem; /* Ajustar según la altura de tu cabecera */
     padding: 1rem;
+    flex: 1;
 }
 
 /* FOOTER */
@@ -114,7 +144,7 @@ footer.main-footer {
     display: flex; /* Usar flexbox para la alineación */
     align-items: center; /* Centrar verticalmente los ítems */
     justify-content: space-between; /* Espacio entre texto y botones */
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     color: #fff;
@@ -129,7 +159,7 @@ footer .footer-content {
 
 footer .footer-content p {
     margin: 0;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     font-weight: bold;
 }
 

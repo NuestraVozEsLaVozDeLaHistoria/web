@@ -9,7 +9,7 @@ body {
 header.main-header {
     background-color: #000; /* Fondo negro */
     color: #fff;
-    padding: 3px 20px;
+    padding: 0.3rem 1.5rem; /* Usar rem en lugar de px */
     position: fixed;
     top: 0;
     width: 100%;
@@ -25,15 +25,15 @@ header .logo {
 }
 
 header .logo img {
-    height: 60px; /* Ajustar el tamaño del logo */
+    height: 3rem; /* Ajustar el tamaño del logo con rem */
     width: auto; /* Mantener la proporción */
 }
 
 header .logo h1 {
     margin: 0;
-    font-size: 16px;
+    font-size: 1rem;
     display: inline-block; /* Alinear con el logo */
-    margin-left: 10px; /* Espacio entre el logo y el texto */
+    margin-left: 0.5rem; /* Espacio entre el logo y el texto */
 }
 
 nav.main-nav {
@@ -46,18 +46,18 @@ nav.main-nav ul {
     padding: 0;
     display: flex;
     margin: 0;
-    margin-right: 10px; /* Añadir margen derecho */
+    margin-right: 1rem; /* Añadir margen derecho */
 }
 
 nav.main-nav ul li {
-    margin: 0 15px;
+    margin: 0 1rem;
     position: relative; /* Necesario para el dropdown */
 }
 
 nav.main-nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: bold; /* Añadir negrita */
 }
 
@@ -65,8 +65,8 @@ nav.main-nav ul li .dropdown-content {
     display: none; /* Ocultar submenú */
     position: absolute;
     background-color: #333;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 10rem;
+    box-shadow: 0px 0.5rem 1rem 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
@@ -77,7 +77,7 @@ nav.main-nav ul li .dropdown-content li {
 
 nav.main-nav ul li .dropdown-content li a {
     color: white;
-    padding: 12px 16px;
+    padding: 0.75rem 1rem;
     text-decoration: none;
     display: block;
 }
@@ -93,24 +93,24 @@ nav.main-nav ul li:hover .dropdown-content {
 .main-nav .social-buttons {
     display: flex;
     align-items: center;
-    margin-right: 50px; /* Añadir margen derecho */
+    margin-right: 3rem; /* Añadir margen derecho */
 }
 
 .main-nav .social-buttons a img {
-    height: 50px; /* Ajusta el tamaño de las imágenes de los botones */
+    height: 3rem; /* Ajusta el tamaño de las imágenes de los botones con rem */
     width: auto; /* Mantener la proporción */
-    margin-left: 20px; /* Espacio entre los botones */
+    margin-left: 1rem; /* Espacio entre los botones */
 }
 
 main {
-    margin-top: 80px; /* Ajustar según la altura de tu cabecera */
-    padding: 20px;
+    margin-top: 5rem; /* Ajustar según la altura de tu cabecera */
+    padding: 1rem;
 }
 
 /* FOOTER */
 footer.main-footer {
     background-color: #000; /* Fondo negro */
-    padding: 10px 20px; /* Ajustar el padding */
+    padding: 1rem 2rem; /* Ajustar el padding con rem */
     display: flex; /* Usar flexbox para la alineación */
     align-items: center; /* Centrar verticalmente los ítems */
     justify-content: space-between; /* Espacio entre texto y botones */
@@ -129,27 +129,31 @@ footer .footer-content {
 
 footer .footer-content p {
     margin: 0;
-    font-size: 11px;
+    font-size: 0.875rem;
     font-weight: bold;
 }
 
 footer .footer-buttons {
     display: flex;
-    margin-left: auto; /* Eliminar espacio entre texto y botones */
+    margin-left: auto; /* Empujar los botones hacia la derecha */
 }
 
 footer .footer-btn {
     color: #000;
     background: linear-gradient(to bottom, #00AEEF 33%, #fff 33%, #fff 66%, #00AEEF 66%);
     border: none;
-    padding: 5px 10px;
-    margin-left: 0px;
-    margin-right: 40px;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     text-decoration: none;
-    font-size: 15px;
-    border-radius: 5px;
+    font-size: 1rem;
+    border-radius: 0.25rem;
     position: relative; /* Añadir posición relativa */
     transition: background-color 0.3s;
+}
+
+footer .footer-btn:last-child {
+    margin-right: 4rem; /* Solo el último botón tendrá un margen derecho de 2rem */
 }
 
 footer .footer-btn .btn-text {
@@ -163,8 +167,8 @@ footer .footer-btn::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 10px; /* Ajustar tamaño del círculo */
-    height: 10px; /* Ajustar tamaño del círculo */
+    width: 0.625rem; /* Ajustar tamaño del círculo con rem */
+    height: 0.625rem; /* Ajustar tamaño del círculo con rem */
     background-color: #DAA520; /* Color dorado */
     border-radius: 50%;
     z-index: 0; /* Asegurarse de que el círculo esté detrás del texto pero delante del fondo */
@@ -174,3 +178,25 @@ footer .footer-btn:hover {
     background-color: #ccc; /* Color de fondo al pasar el cursor */
 }
 
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    header .logo h1 {
+        font-size: 0.875rem;
+    }
+
+    footer .footer-btn {
+        font-size: 0.875rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 0.75rem;
+    }
+
+    footer .footer-btn {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+}

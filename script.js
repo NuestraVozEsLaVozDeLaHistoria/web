@@ -19,7 +19,6 @@ function includeHTML() {
     });
 }
 
-// Función para cargar nuevas páginas dentro de #content sin recargar
 function loadPage(page) {
     fetch(page)
         .then(response => {
@@ -34,14 +33,21 @@ function loadPage(page) {
         });
 }
 
-// Cargar automáticamente las secciones al inicio
+function loadPageTemps(page) {
+    fetch(page)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('content').innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar la página:', error));
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
     includeHTML();
-
-    // Asignar evento a los botones de navegación
     document.body.addEventListener("click", (event) => {
         if (event.target.classList.contains("btn-load")) {
-            event.preventDefault(); // Evita que cambie la URL
+            event.preventDefault();
             let page = event.target.getAttribute("data-page");
             loadPage(page);
         }

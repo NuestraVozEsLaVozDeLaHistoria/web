@@ -59,7 +59,7 @@ img {
 }
 
 .bg-voces {
-    background: url('assets/images/temp-1.webp') no-repeat center center/cover;
+    background: url('assets/images/temp-1.png') no-repeat center center/cover;
 }
 
 .bg-2024 {
@@ -126,8 +126,9 @@ p, .btn {
 }
 
 .btn:hover {
-    background-color: white; /* Fondo blanco al pasar el mouse */
-    color: black; /* Texto negro al pasar el mouse */
+    background-color: rgba(255, 255, 255, 0.2); /* Un leve cambio de color */
+    color: white; /* Mantiene el color del texto */
+    border-color: rgba(255, 255, 255, 0.8); /* Aumenta el brillo del borde */
 }
 
 .btn-container {

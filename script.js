@@ -1,3 +1,4 @@
+// Function to dynamically include HTML content from external files.
 function includeHTML() {
     var elements = document.querySelectorAll("[include-html]");
     elements.forEach(elmnt => {
@@ -19,6 +20,7 @@ function includeHTML() {
     });
 }
 
+// Function to load a new page into the "content" element.
 function loadPage(page) {
     fetch(page)
         .then(response => {
@@ -33,18 +35,11 @@ function loadPage(page) {
         });
 }
 
-function loadPageTemps(page) {
-    fetch(page)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('content').innerHTML = data;
-        })
-        .catch(error => console.error('Error al cargar la página:', error));
-}
-
-
+// Event listener to execute functions when the document is fully loaded.
 document.addEventListener("DOMContentLoaded", () => {
     includeHTML();
+    
+    // Adds click event listener to buttons with class "btn-load" to dynamically load pages
     document.body.addEventListener("click", (event) => {
         if (event.target.classList.contains("btn-load")) {
             event.preventDefault();

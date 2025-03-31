@@ -9,7 +9,11 @@
 
     <!-- Navigation menu -->
     <nav class="main-nav">
-        <ul>
+
+        <!-- Menu toggle button (only visible on mobile) -->
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <ul id="nav-menu">
 
             <!-- Redirect to "Inicio" -->
             <li><a href="#" class="btn btn-load" data-page="content.html">Inicio</a></li>
@@ -20,7 +24,7 @@
                 <ul class="dropdown-content">
 
                     <!-- Redirect to "Season 2024" -->
-                    <li><a href="#" class="btn btn-load" data-page="2024.html">2024</a></li>
+                    <li class="hide-mobile"><a href="#" class="btn btn-load" data-page="2024.html">2024</a></li>
                 </ul>
             </li>
 

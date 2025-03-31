@@ -48,3 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+// Auxiliar function for dropdown menu on mobile resolutions.
+function toggleMenu() {
+    var menu = document.getElementById("nav-menu");
+    menu.classList.toggle("active");
+}

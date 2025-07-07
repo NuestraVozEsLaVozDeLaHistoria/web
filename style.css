@@ -64,11 +64,15 @@ img {
 }
 
 .bg-voces {
-    background: url('assets/images/temp-1.png') no-repeat center center/cover;
+    background: url('assets/images/escudo-pañuelo.png') no-repeat center center/cover;
 }
 
 .bg-2024 {
     background: url('assets/images/cañada-cordoba.webp') no-repeat center center/cover;
+}
+
+.bg-2025 {
+    background: url('assets/images/postal-comodoro.webp') no-repeat center center/cover;
 }
 
 .background {
@@ -78,6 +82,58 @@ img {
     width: 100vw;
     height: 100vh;
     z-index: -1;
+}
+
+/* ============================ */
+/* CARD-STYLE “VOICES” SECTIONS */
+/* ============================ */
+
+.seccion.voces-2024,
+.seccion.voces-2025 {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.seccion.voces-2024 {
+  background: url('assets/images/temp-1.png') no-repeat center center/cover;
+}
+
+.seccion.voces-2025 {
+  background: url('assets/images/temp-2.png') no-repeat center center/cover;
+}
+
+.seccion.voces-2024 .overlay,
+.seccion.voces-2025 .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.seccion.voces-2024 h2,
+.seccion.voces-2024 p,
+.seccion.voces-2024 .btn,
+.seccion.voces-2025 h2,
+.seccion.voces-2025 p,
+.seccion.voces-2025 .btn {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
+
+.seccion .btn {
+  margin-top: 1.5rem;
 }
 
 /* =============================== */

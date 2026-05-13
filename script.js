@@ -21,7 +21,6 @@ function includeHTML() {
 }
 
 // Function to load a new page into the "content" element.
-// Function to load a new page into the "content" element.
 function loadPage(page) {
     fetch(page)
         .then(response => {
@@ -30,7 +29,11 @@ function loadPage(page) {
         })
         .then(data => {
             document.getElementById("content").innerHTML = data;
-            window.scrollTo(0, 0);
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+                document.documentElement.scrollTop = 0; 
+                document.body.scrollTop = 0; 
+            }, 50);
         })
         .catch(error => {
             document.getElementById("content").innerHTML = error.message;
